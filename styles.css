@@ -1,0 +1,243 @@
+@font-face {
+    font-family: 'beaufort';
+    src: url('assets/fonts/BeaufortforLOL-Regular.ttf');
+}
+
+:root {
+    /* Cores */
+    --branco-principal: #FFFFFF; 
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #30588C;
+    --cor-fundo: #00010D;
+    --hover-botao: #732959;
+
+    /* fontes */
+    --fonte-principal: 'beaufort';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+  }
+
+body {
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: var(--cor-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+}
+
+.main {
+    background-image: url("assets/img/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__caixa {
+    margin: 0 6rem;
+}
+
+.container__titulo {
+    font-family: var(--fonte-principal);
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.container__img {
+    margin: 1rem 0 2rem 0;
+    width: 25rem;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    color: var(--branco-principal);
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 1.6rem;
+    display: block;
+    margin-bottom: 1.6rem;
+}
+
+.container__botao:hover {
+    background-color: var(--hover-botao);
+}
+
+.container__botao_secundario {
+    color: var(--branco-principal);
+    border: 2px solid var(--branco-principal);
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 1.6rem;
+    display: block;   
+}
+
+.container__botao_secundario:hover {
+    border-color: var(--hover-botao);
+}
+
+.container__aviso {
+    font-size: 1.2rem;
+    color: var(--cinza-secundario);
+}
+
+.container__descricao {
+    padding: 12rem;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0, 10rem;
+}
+
+.descricao__titulo {
+    color: var(--branco-principal);
+    font-weight: 700;    
+    font-size: 4.8rem;
+    margin-bottom: 0.1rem;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__img {
+    height: 60%;
+    margin: 0 35%;
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 2rem;   
+}
+
+.secundario__img__features {
+    width: 80%;
+}
+
+.secundario__img__netflix {
+    width: 80%;
+    margin-left: 10rem;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__lista {
+    justify-content: center;
+    display: flex;
+    list-style-type: none;
+}
+
+.dispositivos__titulo {
+    font-size: 4.8rem;
+    font-weight: 700;
+}
+
+.lista__item {
+    margin: 4rem 0;
+    font-size: 3.2rem; 
+    color: var(--branco-principal);
+}
+
+.lista__item img {
+    width: 100%;
+}
+
+.rodape {
+    margin: 14.5rem 0 10rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--cinza-secundario);
+}
+
+.rodape__img {
+    width: 20rem;
+}
+
+.rodape__lista {
+    justify-content: center;
+    display: flex;
+    list-style-type: none;
+}
+
+.lista__item {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.lista__item__link {
+    font-size: 1.6rem;
+    margin: 1.2rem 0 0 1.2rem;
+    text-decoration: none;
+    color: var(--branco-principal);
+    font-weight: 400;
+    display: block;
+}
+
+.lista__item__link:hover {
+    color: var(--botao-azul);
+}
+
+.rodape__texto {
+    margin: 2.4rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        height: auto;
+        display: block;
+        background-image: none;
+        margin-bottom: 10rem;
+    }
+
+    .container__caixa {
+        margin: 2rem 2rem;
+    }
+
+    .secundario {
+        text-align: center;
+        margin: 0 0 10rem;
+        padding: 0;
+    }
+
+    .secundario__img {
+        margin: 0 0 0 10rem;
+        width: 60%;
+    }
+
+    .secundario__img__netflix {
+        margin: 0;
+        width: 80%;
+    }
+
+    .container__descricao {
+        padding: 0;
+    }
+
+    .dispositivos__lista {
+        display: block;
+    }
+
+    .rodape {
+        margin-bottom: 1rem;
+    }
+
+    .rodape__lista {
+        display: block;
+    }
+}
